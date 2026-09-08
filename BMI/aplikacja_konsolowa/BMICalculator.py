@@ -33,7 +33,7 @@ class BMICalculator:
     def weight(self, value):
         print("getter method called weight")
 
-        if not (0.5 <= value <= 2.5):
+        if not (2 <= value <= 300):
             raise ValueError("Enter a proper value")
 
         self._weight = value
