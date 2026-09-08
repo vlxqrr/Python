@@ -4,11 +4,15 @@ function CalculateBMI() {
   const weight_value = document.getElementById("weight").value;
   const result = document.getElementById("result");
 
-  const height = parseInt(height_value);
+  const height = parseFloat(height_value);
   const weight = parseFloat(weight_value);
 
   // Walidacja czy pola nie są puste
-  if (isNaN(height) || isNaN(weight) || height <= 0) {
+  if (
+    isNaN(height) || isNaN(weight) ||
+    height < 0.5  || height > 2.5  ||
+    weight < 2    || weight > 300
+  ) {
     result.innerHTML = "Wprowadź poprawne dane!";
     result.style.color = "red";
     return;
@@ -35,6 +39,7 @@ function CalculateBMI() {
   }
 }
 
+// Funkcja zapisująca 5 ostatnich wyników BMI
 function SaveBMIResult(bmiValue) {
   const history = JSON.parse(localStorage.getItem('bmiHistory')) || [];
 
@@ -47,6 +52,7 @@ function SaveBMIResult(bmiValue) {
   localStorage.setItem('bmiHistory', JSON.stringify(history));
 }
 
+// Funkcja wyświetlenia historii w liście
 function DisplayHistory() {
   const historyList = document.getElementById('historyList');
   if (!historyList) return;
