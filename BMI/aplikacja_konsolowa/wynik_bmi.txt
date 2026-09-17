@@ -1,4 +1,4 @@
 Wzrost 1.7m 
-Waga 50.0kg 
-BMI 17.3
-Interpretacja niedowaga
+Waga 60.0kg 
+BMI 20.76
+Interpretacja waga prawidlowa

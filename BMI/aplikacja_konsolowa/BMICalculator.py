@@ -4,12 +4,6 @@ class BMICalculator:
         self._weight = float(_weight)
         self._BMI = None
 
-        if not (0.5 <= _height <= 2.5):
-            raise ValueError("Enter a proper value") 
-
-        if not (2 <= _weight <= 300):
-            raise ValueError("Enter a proper value") 
-
     # getting a height value
     @property
     def height(self):
@@ -23,7 +17,7 @@ class BMICalculator:
         print("getter method called weight")
 
         if not (0.5 <= value <= 2.5):
-            raise ValueError("Enter a proper value") 
+            raise ValueError("Enter a proper value")
 
         self._height = value
 
@@ -32,22 +26,24 @@ class BMICalculator:
     def weight(self):
         print("getter method called weight")
         return self._weight
-    
+
     # setting a weight value
     # checking the validation
     @weight.setter
     def weight(self, value):
         print("getter method called weight")
 
-        if not (0.5 <= value <= 2.5):
-            raise ValueError("Enter a proper value") 
-    
+        if not (2 <= value <= 300):
+            raise ValueError("Enter a proper value")
+
         self._weight = value
 
+    # Calculating users BMI
     def countBMI(self) -> float:
-        self.BMI = self._weight/(self._height ** 2)
+        self.BMI = self._weight / (self._height**2)
         return round(self.BMI, 2)
 
+    # Checking the interpretation
     def interpretationBMI(self):
         if self.BMI < 18.5:
             return "niedowaga"
@@ -57,6 +53,3 @@ class BMICalculator:
             return "nadwaga"
         else:
             return "otylosc"
-
-    
-
