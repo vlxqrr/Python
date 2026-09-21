@@ -11,18 +11,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -32,7 +28,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.window.Dialog
 
 
 val DarkNavyBackground = Color(0xFF232338)
@@ -58,8 +53,6 @@ fun CalculatorBMI() {
     var weightInput by remember { mutableStateOf("") }
     var bmiResult by remember { mutableStateOf("") }
     var interpretation by remember { mutableStateOf("") }
-    val history = remember { mutableStateListOf<String>() }
-    var showHistory by remember { mutableStateOf(false) }
 
     Column(
         modifier = Modifier.fillMaxSize()
@@ -167,8 +160,6 @@ fun CalculatorBMI() {
                                 } else {
                                     "Otyłość"
                                 }
-                                
-                                history.add(0, "BMI: %.2f - %s".format(bmi, interpretation))
                             } else {
                                 bmiResult = "Błędne dane"
                                 interpretation = ""
@@ -182,53 +173,6 @@ fun CalculatorBMI() {
                         modifier = Modifier.fillMaxWidth().height(48.dp)
                     ) {
                         Text("Oblicz", fontSize = 16.sp)
-                    }
-
-                    Spacer(modifier = Modifier.height(12.dp))
-
-                    Button(
-                        onClick = { showHistory = true },
-                        shape = RoundedCornerShape(12.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = NormalWeightBlue,
-                            contentColor = ObeseBlue
-                        ),
-                        modifier = Modifier.fillMaxWidth().height(48.dp)
-                    ) {
-                        Text("Historia", fontSize = 16.sp)
-                    }
-
-                    if (showHistory) {
-                        Dialog(onDismissRequest = { showHistory = false }) {
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .height(400.dp)
-                                    .background(UnderweightBlue, RoundedCornerShape(16.dp))
-                                    .padding(24.dp)
-                            ) {
-                                Column {
-                                    Text(
-                                        "Historia Wyników",
-                                        color = ObeseBlue,
-                                        fontSize = 20.sp,
-                                        modifier = Modifier.padding(bottom = 8.dp)
-                                    )
-                                    HorizontalDivider(color = DarkNavyBackground)
-                                    LazyColumn(modifier = Modifier.fillMaxSize()) {
-                                        items(history) { entry ->
-                                            Text(
-                                                text = entry,
-                                                color = ObeseBlue,
-                                                modifier = Modifier.padding(vertical = 8.dp),
-                                                fontSize = 16.sp
-                                            )
-                                            HorizontalDivider(color = DarkNavyBackground.copy(alpha = 0.5f))
-                                        }
-                                    }
-                                }
-                            }
-                        }
                     }
 
                     if (bmiResult.isNotEmpty()) {
