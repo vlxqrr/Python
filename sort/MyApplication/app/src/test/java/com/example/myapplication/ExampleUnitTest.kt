@@ -1,17 +1,25 @@
 package com.example.myapplication
 
 import org.junit.Test
-
 import org.junit.Assert.*
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun bubbleSort_sortsNumbersCorrectly() {
+        val input = listOf(6, 2, 8, 1, 9, 3)
+        val expected = listOf(1, 2, 3, 6, 8, 9)
+        assertEquals(expected, bubbleSort(input))
+    }
+
+    @Test
+    fun bubbleSort_handlesAlreadySortedList() {
+        val input = listOf(1, 2, 3, 4, 5)
+        assertEquals(input, bubbleSort(input))
+    }
+
+    @Test
+    fun bubbleSort_handlesEmptyAndSingleElementList() {
+        assertEquals(emptyList<Int>(), bubbleSort(emptyList()))
+        assertEquals(listOf(42), bubbleSort(listOf(42)))
     }
 }
