@@ -1,26 +1,36 @@
 {
-  "editor.inlineSuggest.enabled": false,
+  "files.associations": {
+    "*.jsx": "javascriptreact"
+  },
+  "editor.tabCompletion": "on",
+  "editor.suggestSelection": "first",
+  "editor.autoClosingTags": true,
   "editor.quickSuggestions": {
-    "other": "off",
+    "other": "on",
     "comments": "off",
     "strings": "off"
   },
-  "editor.suggestOnTriggerCharacters": false,
-  "editor.parameterHints.enabled": false,
-  "editor.wordBasedSuggestions": "off",
-  "python-envs.defaultEnvManager": "ms-python.python:system",
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.parameterHints.enabled": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "[javascriptreact]": {
+    "editor.autoClosingTags": true,
+    "editor.tabCompletion": "on"
+  },
+  "[html]": {
+    "editor.autoClosingTags": true,
+    "editor.tabCompletion": "on"
+  },
   "[python]": {
-    "editor.inlineSuggest.enabled": false,
+    "editor.tabCompletion": "on",
     "editor.quickSuggestions": {
-      "other": "off",
+      "other": "on",
       "comments": "off",
       "strings": "off"
-    },
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.organizeImports": "explicit"
     }
   }
 }
