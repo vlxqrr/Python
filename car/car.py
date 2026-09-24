@@ -3,9 +3,9 @@ class car:
         self,
         mark: str = "",
         model: str = "",
-        caryear: int = "",
+        caryear: int = 0,
         fuel: float = 0.0,
-        capacity: str = "",
+        capacity: str = 0,
         speed: float = 0.0,
         wear: float = 0.0,
         engine_on: bool = False,
@@ -47,7 +47,7 @@ class car:
 
         if distance <= 0:
             print("Dystans musi byc wiekszy niz 0")
-
+            return
         fuel_needed = (distance * self.wear) / 100
 
         if self.fuel >= fuel_needed:
@@ -57,7 +57,7 @@ class car:
             print(f"Spalono: {fuel_needed:.2f} | zostalo: {self.fuel}")
             print(f"Aktualny przebieg auta {self.mileage}")
         else:
-            possible_distance = self.fuel / self.wear
+            possible_distance = (self.fuel / self.wear) * 100
             self.mileage += possible_distance
             print(f"Brak paliwa, przejechano {possible_distance}")
             self.fuel = 0.0
@@ -74,7 +74,7 @@ class car:
         return self.speed
 
     def slowingDown(self):
-        if not self.engine_on or self.speed == 0:
+        if not self.engine_on or self.speed <= 0:
             print("Nie mozna zwalniac przy 0 predkosci")
             return
 
@@ -87,16 +87,14 @@ class car:
             refuel = float(input("Ile chcesz zatankowac litrow:? "))
             if refuel <= 0:
                 print("Podaj wartosc wieksza od 0")
-            elif refuel + self.fuel <= self.capacity:
-                self.fuel += refuel
-                print(f"Zatankowano {refuel} litrow")
-            elif refuel + self.fuel == self.capacity:
-                print("Pelny bak")
-            else:
+            elif refuel + self.fuel > self.capacity:
                 maxSpace = self.capacity - self.fuel
-                print(
-                    f"Za duzo nie zmiesci sie w baku {self.capacity}, maksymalnie mozesz dolac {maxSpace}"
-                )
+                print(f"Za duzo, nie zmiesci sie w baku ({self.capacity} l). Maksymalnie mozesz dolac: {maxSpace:.2f} l")
+            else:
+                self.fuel += refuel
+                print(f"Zatankowano {refuel} litrow. Aktualny stan: {self.fuel:.2f} l")
+                if self.fuel == self.capacity:
+                    print("Bak jest pelny!")
         else:
             print("Najpierw wylacz silnik!")
 
@@ -139,7 +137,8 @@ class car:
             elif self.action == "2":
                 self.showState()
             elif self.action == "3":
-                self.drive()
+                km = float(input("Ile kilometrow chcesz przejechac?"))
+                self.drive(km)
             elif self.action == "4":
                 self.acceleration()
             elif self.action == "5":
@@ -156,5 +155,5 @@ class car:
 
 
 if __name__ == "__main__":
-    app = car("", "", "", 0, "", 0, 0, False)
+    app = car("", "", 0, 0, 0, 0, 0, False)
     app.run()

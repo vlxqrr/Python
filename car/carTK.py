@@ -1,6 +1,5 @@
 import tkinter as tk
 
-
 class car:
     def __init__(
         self,
