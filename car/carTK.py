@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import messagebox
 
 class car:
     def __init__(
@@ -42,10 +43,23 @@ class car:
         tk.Label(self.root, text="Podaj jakie auto ma spalanie na 100km").pack()
         self.wear_entry = tk.Entry().pack()
 
-        tk.Label(self.root, text="Zatwierdz").pack()
-        self.submit_button = tk.Button().pack()
+        self.submit_button = tk.Button(self.root, text="Zatwierdz", command=self.menu)
+        self.submit_button.pack()
 
+        self.required_entries = [
+            self.mark_entry,
+            self.model_entry,
+            self.caryear_entry,
+            self.fuel_entry,
+            self.capacity_entry,
+            self.wear_entry
+        ]
     def menu(self):
+        if all(entry.get().strip() for entry in self.required_entries):
+            messagebox.showinfo("Wszystkie pola zostaly poprawnie podane")
+        else:
+            messagebox.showwarning("Blad, podaj poprawne dane")
+        
         menu = tk.Label(self.root, text="1) Uruchom silnik\n 2) Sprawdz stan pojazdu\n 3) Jedz\n 4) Przyspiesz\n 5) Hamuj\n 6) Tankuj\n 7) Wylacz silnik\n 8) Zakoncz")
     def run(self):
         
