@@ -4,7 +4,7 @@
             "outputFile": "com.example.calculatorbmi.app-mergeDebugResources-37:/values-v30/values-v30.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\5d\\.gradle\\caches\\9.5.0\\transforms\\c7d5a55984e374cea36426767b0e731b\\transformed\\material3\\res\\values-v30\\values-v30.xml",
+                    "source": "C:\\Users\\kamila\\.gradle\\caches\\9.5.0\\transforms\\c7d5a55984e374cea36426767b0e731b\\transformed\\material3\\res\\values-v30\\values-v30.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

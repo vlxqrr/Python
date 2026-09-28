@@ -1,10 +1,10 @@
-#Mon Sep 21 09:39:54 CEST 2026
-base.0=C\:\\Users\\5d\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\5d\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\5d\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
-base.3=C\:\\Users\\5d\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.4=C\:\\Users\\5d\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\global_synthetics_dex\\debug\\generateDebugGlobalSynthetics\\classes.dex
-base.5=C\:\\Users\\5d\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Wed Sep 23 00:07:27 CEST 2026
+base.0=C\:\\Users\\kamila\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\kamila\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\kamila\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.3=C\:\\Users\\kamila\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.4=C\:\\Users\\kamila\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\global_synthetics_dex\\debug\\generateDebugGlobalSynthetics\\classes.dex
+base.5=C\:\\Users\\kamila\\Documents\\GitHub\\Python\\BMI\\aplikacja_mobilna\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=11/classes.dex
