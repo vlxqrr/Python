@@ -30,15 +30,13 @@ class car:
             print("Nie ma paliwa")
 
     def showState(self):
-        print("Status:")
-        print(f"Marka auta {self.mark}")
-        print(f"Model auta {self.model}")
-        print(f"Rocznik auta {self.caryear}")
-        print(f"Ilosc paliwa {self.fuel}")
-        print(f"Pojemnosc auta {self.capacity}")
-        print(f"Aktualna predkosc {self.speed}")
-        print(f"Zuzycie na 100km {self.wear}")
-        print(f"Czy silnik jest wlaczony {self.engine_on}")
+        self.engineStatus = "wlaczony" if self.engine_on else "wylaczony"
+        state = (f"Pojazd: {self.mark} {self.model} ({self.caryear})\n"
+                    f"Pojazd jest {self.engineStatus}\n"
+                    f"Paliwo: {self.fuel:.1f}/{self.capacity:.1f} l\n"
+                    f"Aktualna predkosc: {self.speed}\n"
+                    f"Przebieg: {self.mileage:.1f} km")
+        print(state)
 
     def drive(self, distance: float):
         if not self.engine_on:
@@ -74,7 +72,11 @@ class car:
         return self.speed
 
     def slowingDown(self):
-        if not self.engine_on or self.speed <= 0:
+        if not self.engine_on:
+            print("Nie mozna zwalniac z wylaczonym silnikiem")
+            return
+        
+        if self.speed <= 0:
             print("Nie mozna zwalniac przy 0 predkosci")
             return
 
