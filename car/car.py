@@ -31,11 +31,13 @@ class car:
 
     def showState(self):
         self.engineStatus = "wlaczony" if self.engine_on else "wylaczony"
-        state = (f"Pojazd: {self.mark} {self.model} ({self.caryear})\n"
-                    f"Pojazd jest {self.engineStatus}\n"
-                    f"Paliwo: {self.fuel:.1f}/{self.capacity:.1f} l\n"
-                    f"Aktualna predkosc: {self.speed}\n"
-                    f"Przebieg: {self.mileage:.1f} km")
+        state = (
+            f"Pojazd: {self.mark} {self.model} ({self.caryear})\n"
+            f"Pojazd jest {self.engineStatus}\n"
+            f"Paliwo: {self.fuel:.1f}/{self.capacity:.1f} l\n"
+            f"Aktualna predkosc: {self.speed}\n"
+            f"Przebieg: {self.mileage:.1f} km"
+        )
         print(state)
 
     def drive(self, distance: float):
@@ -75,7 +77,7 @@ class car:
         if not self.engine_on:
             print("Nie mozna zwalniac z wylaczonym silnikiem")
             return
-        
+
         if self.speed <= 0:
             print("Nie mozna zwalniac przy 0 predkosci")
             return
@@ -91,7 +93,9 @@ class car:
                 print("Podaj wartosc wieksza od 0")
             elif refuel + self.fuel > self.capacity:
                 maxSpace = self.capacity - self.fuel
-                print(f"Za duzo, nie zmiesci sie w baku ({self.capacity} l). Maksymalnie mozesz dolac: {maxSpace:.2f} l")
+                print(
+                    f"Za duzo, nie zmiesci sie w baku ({self.capacity} l). Maksymalnie mozesz dolac: {maxSpace:.2f} l"
+                )
             else:
                 self.fuel += refuel
                 print(f"Zatankowano {refuel} litrow. Aktualny stan: {self.fuel:.2f} l")
