@@ -25,6 +25,7 @@ form {
   align-items: center;
   gap: 10px;
   text-align: center;
+  color: #160785;
 }
 #menuList {
   white-space: pre-line;
@@ -43,13 +44,18 @@ input[type=text], input[type=number] {
 }
 
 input[type=button]{
-  background: #776ccf;
+  background: #7e72db;
   border-radius: 20px;
   padding: 5px;
   width: 150px;
   border-color: #4a36e4;
   margin: 10px;
+  color:#160785;
 }
 input::placeholder{
   padding: 5px;
+}
+
+#result{
+  color: #2d1da7;
 }

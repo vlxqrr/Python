@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { submit } from './assets/script/car'
+import { submitForm, submitChoice } from './assets/script/car'
 
 function App() {
 
@@ -29,7 +29,7 @@ function App() {
           <label htmlFor="">Podaj jakie auto ma spalanie:</label>
           <input type="number" id="wear" placeholder='Spalanie auta'/>
 
-          <input id="submitForm" type="button" value="Zatwierdz" onClick={submit}/>
+          <input id="submitForm" type="button" value="Zatwierdz" onClick={submitForm}/>
         </form>
       </section>
       <section class="menu" id="menu" hidden>
@@ -45,7 +45,8 @@ function App() {
            ------------------</p>
            <label>Ktora akcje chcesz wykonac?</label>
            <input type="text" id='choice' placeholder='Wybierz numer (1-8)'/>
-           <input type="button" id="submitAction" value="Zatwierdz" />
+           <input type="button" id="submitAction" value="Zatwierdz" onClick={submitChoice} />
+           <p id="result"></p>
         </section>
       
     </>
