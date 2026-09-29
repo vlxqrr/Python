@@ -31,11 +31,27 @@ function App() {
 
           <input id="submitForm" type="button" value="Zatwierdz" onClick={submit}/>
         </form>
-        <section class="menu" id="menu"></section>
       </section>
+      <section class="menu" id="menu" hidden>
+          <p id="menuList">------------------ <br/>
+            1) Uruchom silnik <br/>
+            2) Sprawdz stan pojazdu <br/>
+            3) Jedz <br/>
+            4) Przyspiesz <br/>
+            5) Hamuj <br/>
+            6) Tankuj <br/>
+            7) Wylacz silnik <br/>
+            8) Zakoncz <br/>
+           ------------------</p>
+           <label>Ktora akcje chcesz wykonac?</label>
+           <input type="text" id='choice' placeholder='Wybierz numer (1-8)'/>
+           <input type="button" id="submitAction" value="Zatwierdz" />
+        </section>
       
     </>
   )
 }
 
 export default App
+
+

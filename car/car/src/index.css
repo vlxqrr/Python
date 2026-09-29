@@ -16,6 +16,9 @@ form {
   gap: 10px;
 }
 
+#menu[hidden] {
+  display: none;
+}
 #menu {
   display: flex;
   flex-direction: column;
@@ -23,7 +26,9 @@ form {
   gap: 10px;
   text-align: center;
 }
-
+#menuList {
+  white-space: pre-line;
+}
 label {
   font-size: 20px;
 }
