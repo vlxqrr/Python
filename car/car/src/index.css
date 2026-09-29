@@ -1,0 +1,50 @@
+body {
+    background: #B0A7F1;
+}
+
+header{
+  text-align: center;
+  color:rgb(75, 61, 230);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+label {
+  font-size: 20px;
+}
+
+input[type=text], input[type=number] {
+  background: #ddd9fa;
+  width: 250px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 20px;
+  border-color: #6756eb;
+}
+
+input[type=button]{
+  background: #776ccf;
+  border-radius: 20px;
+  padding: 5px;
+  width: 150px;
+  border-color: #4a36e4;
+  margin: 10px;
+}
+input::placeholder{
+  padding: 5px;
+}
