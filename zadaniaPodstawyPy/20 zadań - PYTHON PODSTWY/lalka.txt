@@ -1,0 +1,23 @@
+A	„Ale ja nie dbam o taki świat, który dwoje ludzi skazuje na tortury za to tylko, że się kochają.” 
+B	„Bywają wielkie zbrodnie na świecie, ale chyba największą jest zabić miłość.” 
+C	„Człowiek jest wtedy najszczęśliwszy, kiedy dokoła siebie widzi to, co nosi w sobie samym…” 
+D	„Dobiegać środka życia i nie znaleźć nawet śladu drogi, po której by się iść chciało – cóż to za rozpacz!…” 
+G	„Głupstwo całe życie, którego początku nie pamiętamy, a końca nie znamy!” 
+H	„Hi! hi! hi! dokąd wy jedziecie, podróżni?…” 
+I	„Ile razy mężczyzna patrzy na kobietę, szatan zakłada mu różowe okulary.” 
+J	„Jakież to pospolite sprężyny wywołują ruch w świecie: trochę węgla ożywia okręt, trochę serca – człowieka…” 
+K	„Kto nie idzie naprzód, cofa się.” 
+L	„Ludzie są jak liście, którymi wiatr ciska; gdy rzuci je na trawnik, leżą na trawniku, a gdy rzuci w błoto – leżą w błocie…” 
+Ł	„Łatwiej wyrzucić tysiące rubli z kieszeni aniżeli jedno przywiązanie z serca. Szczególniej, gdy się już zagnieździ.” 
+M	„Miłość jest radością świata, słońcem życia, wesołą melodią w pustyni.” 
+N	„Niekiedy duch ludzki rozdziera się i walczy z samym sobą…” 
+O	„Ostatecznym kresem złych i dobrych jest garść popiołu.” 
+P	„Pluń na wszystko, co minęło: na własną boleść i na cudzą nikczemność… Wybierz sobie jaki cel, jakikolwiek, i zacznij nowe życie.” 
+R	„Romantycy muszą wyginąć, to darmo; dzisiejszy świat nie dla nich…” 
+S	„Szczęście każdy nosi w sobie.” 
+Ś	„Świat podobny jest do amatorskiego teatru; więc nieprzyzwoicie jest pchać się w nim do ról pierwszych, a odrzucać podrzędne.” 
+T	„To są ujeżdżacze i pogromcy męskiego rodu!” 
+U	„Umarł przywalony resztkami feudalizmu… Zginął, aż ziemia zadrżała…” 
+W	„W naturze nie ma grobów ani śmierci; są różne formy bytu, z których jedne pozwalają nam być chemikami, inne tylko preparatami chemicznymi.” 
+Z	„Zdawało jej się, że cały świat jest dla niej, a ona po to, ażeby się bawić.” 
+Ż	„Żył kilkadziesiąt lat, a w ciągu nich tyle pragnął i tyle cierpiał, że martwy świat nie zaznałby tego przez całą wieczność.” 

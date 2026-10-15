@@ -1,0 +1,10 @@
+zeszyt;450
+dlugopis;300
+olowek;200
+gumka;150
+linijka;250
+temperowka;350
+flamaster;400
+kredki;1200
+blok;650
+klej;500

@@ -1,0 +1,3 @@
+zeszyt;450
+dlugopis;300
+olowek;200

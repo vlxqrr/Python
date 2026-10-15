@@ -1,0 +1,10 @@
+zeszyt;3
+dlugopis;5
+zeszyt;2
+olowek;4
+gumka;2
+linijka;1
+dlugopis;3
+kredki;2
+blok;4
+klej;3
